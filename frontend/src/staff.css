@@ -1,0 +1,84 @@
+body{
+  font-family:cursive;
+}
+.staff-container{
+    background-color: #081739;
+}
+.header-tab{
+    display: flex;
+}
+.Logout-Button{
+    width: 80px;
+   height: 30px;
+   margin-top: 20px;
+   margin-left: 70%;
+   cursor: pointer;
+   background-color: blue;
+   border: none;
+   color: white;
+   
+   border-radius: 10px;
+}
+.Logout-Button:hover{
+  background-color: rgb(71, 71, 220);
+  box-shadow: 0px 0px 20px blue;
+}
+.Complaint-card{
+  width: 300px;
+  border:1px solid rgb(9, 9, 233);
+  margin-bottom: 50px;
+  margin-right: 50px;
+  color: white;
+  height: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow-y: auto;
+  
+   
+}
+.Complaint-card:active {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+.Complaint-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 80px rgb(46, 46, 151);
+}
+.Complaint-section{
+    margin-left: 50px;
+   display: flex;
+    flex-wrap: wrap;
+     overflow: visible;
+     margin-top: 90px;
+}
+.assingned-complaint-text{
+    color: white;
+    margin-left: 40%;
+    font-size: 30px;
+    margin-top: 50px;
+}
+.Welcome-text{
+    font-size: 30px;
+    color: white;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.Complaint-content{
+    margin-left: 20px;
+}
+.assign-complaint{
+  background-color: rgb(59, 59, 214);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.Complaint-content h2{
+    color: rgb(135, 135, 239);
+}
+.no-assigned-text{
+  color: white;
+  font-size: 25px;
+  margin-left: 560px;
+}

@@ -1,0 +1,130 @@
+
+.login-container{
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body{
+    margin: 0;
+    background-color: #081739;
+}
+.login-form{
+    margin-left:73px;
+    margin-top: 7%;
+    
+    width: 400px;
+}
+.input-field{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    height: 32px;
+    width: 250px;
+    margin-top: 15px;
+    background-color: rgb(1, 1, 101);
+    color: white;
+    animation: slideUp 2s ease forwards;
+    opacity: 0; 
+    
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.toggle-password-button2{
+    margin-left: -35px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(1, 1, 101);
+    animation: slideUp 2s ease forwards;
+    opacity: 0; 
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.login-button{
+    margin-top: 10px;
+    background-color: rgb(56, 147, 56);
+    border:1px solid transparent ;
+    border-radius: 5px;
+    color: blue;
+    width: 90px;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    animation: slideUp 2s ease forwards;
+    opacity: 0; 
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.login-button:hover{
+    background-color: rgb(29, 147, 29);
+    border-color:rgb(66, 250, 66);
+    color: rgb(19, 19, 83);
+    box-shadow: 5px 0px 20px green;
+}
+.login-form{
+    margin-left:70px;
+    margin-top: 10%;
+    width: 400px;
+}
+.login-text{
+    margin-left: 90px;
+    color: rgb(106, 106, 246);
+}
+.link{
+    text-decoration: none;
+    color: rgb(33, 186, 33);
+}
+.link:hover{
+    color: rgb(97, 254, 97);
+}
+.donthave{
+    color: rgb(85, 125, 7);
+}
+
+.bordered-box2{
+border: 1px solid transparent;
+width: 400px;
+margin-left: 550px;
+margin-top: 90px;
+height: 400px;
+border-radius: 10px;
+box-shadow: 0px 0px 40px rgb(46, 46, 151);
+
+}
+
+
+.bordered-box2:hover{
+   box-shadow: 0px 0px 80px rgb(46, 46, 151);
+}

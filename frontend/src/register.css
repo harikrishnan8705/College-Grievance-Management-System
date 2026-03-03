@@ -1,0 +1,136 @@
+.register-container{
+    background-color:  #081739;
+  min-width: 320px;
+  min-height: 95vh;
+  animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body{
+    
+ margin: 0;
+}
+.register-form{
+    margin-left:73px;
+    margin-top: 7%;
+    
+    width: 400px;
+}
+.register-text{
+    margin-left: 77px;
+    color: rgb(106, 106, 246);
+    
+}
+
+.bordered-box{
+border: 1px solid transparent;
+width: 400px;
+margin-left: 550px;
+margin-top: 50px;
+
+height: 575px;
+border-radius: 10px;
+box-shadow: 0px 0px 40px rgb(46, 46, 151);
+
+}
+.bordered-box:hover{
+   box-shadow: 0px 0px 80px rgb(46, 46, 151);
+}
+
+.register-button{
+    margin-top: 30px;
+    background-color: rgb(56, 147, 56);
+    border:1px solid transparent ;
+    border-radius: 5px;
+    color: blue;
+    width: 90px;
+    height: 25px;
+    cursor: pointer;
+}
+.register-button:hover{
+    background-color: rgb(29, 147, 29);
+    border-color:rgb(66, 250, 66);
+    color: rgb(19, 19, 83);
+    box-shadow: 5px 0px 20px green;
+}
+.register-button > p{
+    margin-top:-10px;
+}
+.input-box{
+    border-radius: 5px;
+    border: none;
+    height: 32px;
+    width: 250px;
+    margin-top: 15px;
+    background-color: rgb(1, 1, 101);
+    color: white;
+    font-size: 14px;
+     animation: slideUp 2s ease forwards;
+  opacity: 0;  
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.input-box2{
+    border-radius: 5px;
+    border: none;
+    height: 34px;
+    width: 255px;
+    margin-top: 15px;
+    background-color: rgb(1, 1, 101);
+    color: white;
+    font-size: 14px;
+    animation: slideUp 2s ease forwards;
+  opacity: 0;  
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.input-box:focus{
+    outline: none;
+}
+.toggle-password-button{
+    margin-left: -35px;
+    cursor: pointer;
+    border: none;
+    background-color:  rgb(1, 1, 101);
+    animation: slideUp 2s ease forwards;
+  opacity: 0;  
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.selection-field
+{
+   color: white;
+   margin-top: -10px;
+}

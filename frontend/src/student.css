@@ -1,0 +1,165 @@
+body{
+  font-family:cursive;
+}
+.student-container{
+    background-color: #081739;
+}
+.Header{
+    display:flex;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+#create-complaint-button{
+    width: 130px;
+   height: 30px;
+   margin-left: 750px;
+   margin-top: 25px;
+   cursor: pointer;
+   background-color: blue;
+   border: none;
+   color: white;
+   border-radius: 10px;
+}
+#create-complaint-button:hover{
+      background-color: rgb(71, 71, 220);
+  box-shadow: 0px 0px 20px blue;
+}
+#my-complaint-button{
+    width: 130px;
+   height: 30px;
+    margin-top: 25px;
+   margin-left: 40px;
+   cursor: pointer;
+   background-color: blue;
+   border: none;
+   color: white;
+   border-radius: 10px;
+}
+#my-complaint-button:hover{
+      background-color: rgb(71, 71, 220);
+  box-shadow: 0px 0px 20px blue;
+}
+.Logout-button{
+    width: 80px;
+   height: 30px;
+   margin-top: 25px;
+   margin-left: 40px;
+   cursor: pointer;
+   background-color: blue;
+   border: none;
+   color: white;
+   
+   border-radius: 10px;
+}
+.Logout-button:hover{
+  background-color: rgb(71, 71, 220);
+  box-shadow: 0px 0px 20px blue;
+}
+.welcome-text{
+    color: white;
+  margin-left: 60px;
+  font-size: 25px;
+}
+.complaint-section{
+   
+    text-align: center;
+}
+.create-complaint-text{
+    margin-top: 50px;
+    color: white;
+    font-size: 20px;
+}
+.complaint-title{
+    width: 300px;
+    font-size: 14px;
+    height: 30px;
+     margin-top: 30px;
+     border-radius: 10px;
+     outline: none;
+     background-color: rgb(1, 1, 101);
+    color: white;
+    border: none;
+}
+.complaint-description{
+    width: 300px;
+    height: 200px;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-size: 14px;
+     outline: none;
+     background-color: rgb(1, 1, 101);
+    color: white;
+    border: none;
+}
+.category-text{
+    color: white;
+}
+.category-priority{
+    display: flex;
+    margin-left: 38%;
+    gap: 20px;
+    margin-top: 20px;
+}
+.category-options{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(1, 1, 101);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.submid-complaint-button{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: blue;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+.submid-complaint-button:hover{
+      background-color: rgb(71, 71, 220);
+  box-shadow: 0px 0px 20px blue;
+}
+.my-complaint-text{
+    color: white;
+    margin-left:45%;
+    font-size: 25px;
+}
+.complaint-card{
+  width: 300px;
+  border:1px solid blue;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  color: white;
+  height: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow-y: auto;
+  
+   
+}
+.complaint-card:active {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+.complaint-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 80px rgb(46, 46, 151);
+}
+.my-complaint-section{
+    margin-left: 50px;
+   display: flex;
+    flex-wrap: wrap;
+     overflow: visible;
+     margin-top: 90px;
+}
+.my-complaint-content{
+    margin-left: 20px;
+}
+.my-complaint-content h2{
+    color: rgb(135, 135, 239);
+}
