@@ -1,0 +1,100 @@
+// const jwt = require("jsonwebtoken");
+// const User = require("../models/User");
+
+// const protect = async (req, res, next) => {
+//   let token;
+
+//   if (
+//     req.headers.authorization &&
+//     req.headers.authorization.startsWith("Bearer")
+//   ) {
+//     try {
+//       token = req.headers.authorization.split(" ")[1];
+
+//       const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+//       req.user = await User.findById(decoded.id).select("-password");
+
+//       next();
+//     } catch (error) {
+//       return res.status(401).json({ message: "Not authorized, token failed" });
+//     }
+//   }
+
+//   if (!token) {
+//     return res.status(401).json({ message: "Not authorized, no token" });
+//   }
+//   try {
+//     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+//     req.user = await User.findById(decoded.id).select("-password");
+//     next();
+//   } catch (error) {
+//     return res.status(401).json({ message: "Not authorized, token failed ❌" });
+//   }
+// };
+
+// const adminOnly = (req, res, next) => {
+//   if (req.user && req.user.role && req.user.role.toLowerCase() === "admin") {
+//     return next();
+//   }
+//   return res.status(403).json({ message: "Admin access only ❌" });
+// };
+  
+
+
+
+// // ✅ STAFF ONLY
+// const staffOnly = (req, res, next) => {
+//   if (req.user && req.user.role === "staff") {
+//     next();
+//   } else {
+//     return res.status(403).json({ message: "Staff access only ❌" });
+//   }
+// };
+
+// module.exports = { protect, adminOnly, staffOnly}
+
+
+const jwt = require("jsonwebtoken");
+const User = require("../models/User");
+
+const protect = async (req, res, next) => {
+  let token;
+
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith("Bearer")
+  ) {
+    token = req.headers.authorization.split(" ")[1];
+  }
+
+  if (!token) {
+    return res.status(401).json({ message: "Not authorized, no token" });
+  }
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    req.user = await User.findById(decoded.id).select("-password");
+
+    next();
+  } catch (error) {
+    return res.status(401).json({ message: "Not authorized, token failed ❌" });
+  }
+};
+
+const adminOnly = (req, res, next) => {
+  if (req.user && req.user.role?.toLowerCase() === "admin") {
+    return next();
+  }
+  return res.status(403).json({ message: "Admin access only ❌" });
+};
+
+const staffOnly = (req, res, next) => {
+  if (req.user && req.user.role?.toLowerCase() === "staff") {
+    return next();
+  }
+  return res.status(403).json({ message: "Staff access only ❌" });
+};
+
+module.exports = { protect, adminOnly, staffOnly };
