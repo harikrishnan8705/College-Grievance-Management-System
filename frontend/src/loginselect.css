@@ -1,0 +1,58 @@
+.home-container{
+     width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  
+}
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #081739;
+}
+.clglogo{
+  width: 200px;
+  margin-bottom: 0px;
+  margin-top: -200px;
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.home-container > h1{
+    color: white;
+    margin-top: 60px;
+    margin-top: 1px;
+}
+
+
+ .btn1 {
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
+  margin-top: 40px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.btn2{
+ width: 100%;
+  max-width: 200px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer; 
+}
+
+.home-container button:hover {
+  background-color: aqua;
+}
