@@ -118,12 +118,18 @@ input[type="date"]::-webkit-datetime-edit {
   width: 100%;
   max-width: 350px;
 }
-.login-text{
+.student-login-text{
     margin-left: 75px;
     color: rgb(106, 106, 246);
     font-size: 28px;
     margin-top: 60px;
     
+}
+.staff-login-text{
+  margin-left: 95px;
+    color: rgb(106, 106, 246);
+    font-size: 28px;
+    margin-top: 60px;
 }
 .link{
     text-decoration: none;

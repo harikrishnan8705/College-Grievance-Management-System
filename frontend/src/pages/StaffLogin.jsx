@@ -34,7 +34,7 @@ export default function StaffLogin() {
     <div className="login-container">
       <div className="bordered-box2">
      <div  className="login-form"> 
-      <h2 className="login-text">Staff Login</h2>
+      <h2 className="staff-login-text">Staff Login</h2>
 
       <form onSubmit={handleLogin}>
         <input className="input-field"

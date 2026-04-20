@@ -44,7 +44,7 @@ export default function StudentLogin() {
      <div className="bordered-box2">
      <div  className="login-form"> 
       
-      <h2 className="login-text">Student Login</h2>
+      <h2 className="student-login-text">Student Login</h2>
       <form onSubmit={handleLogin}>
         <input
         className="input-field"
