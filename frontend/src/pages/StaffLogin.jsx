@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { useState } from "react";
 import API from "../api/axios";
 import { useNavigate } from "react-router-dom";
@@ -17,16 +18,16 @@ export default function StaffLogin() {
       const res = await API.post("/api/auth/login", { username, password });
 
       if (res.data.user.role !== "staff") {
-        alert("This login is only for staff ");
+        toast.error("This login is only for staff ");
         return;
       }
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
-
+    toast.success("Login Successfully");
       navigate("/staff");
     } catch (err) {
-       alert(err.response?.data?.message || "Login failed");
+       toast.error(err.response?.data?.message || "Login failed");
     }
   };
 

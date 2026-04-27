@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { useState } from "react";
 import API from "../api/axios";
 import { useNavigate } from "react-router-dom";
@@ -16,7 +17,7 @@ export default function StudentLogin() {
 
   //  Validate BEFORE API call
   if (!username || !dob) {
-    alert("Please enter username and date of birth");
+    toast.error("Please enter username and date of birth");
     return;
   }
 
@@ -24,16 +25,17 @@ export default function StudentLogin() {
     const res = await API.post("/api/auth/login", { username, dob });
 
     if (res.data.user.role !== "student") {
-      alert("This login is only for students");
+      toast.error("This login is only for students");
       return;
     }
 
     localStorage.setItem("token", res.data.token);
     localStorage.setItem("user", JSON.stringify(res.data.user));
-
+     
+    toast.success("Login Successfully");
     navigate("/student");
   } catch (err) {
-    alert(err.response?.data?.message || "Login failed");
+    toast.error(err.response?.data?.message || "Login failed");
   }
 };
 

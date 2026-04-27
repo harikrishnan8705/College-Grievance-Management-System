@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { useState } from "react";
 import API from "../api/axios";
 import { useNavigate } from "react-router-dom";
@@ -23,13 +24,14 @@ export default function AdminLogin() {
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("role", res.data.user.role);
-
+      
+      toast.success("Login Successfully")
       navigate("/admin");
     } catch (err) {
        console.log("FULL ERROR:", err);
   console.log("DATA:", err.response?.data);
 
-  alert(err.response?.data?.message || "Login failed");
+  toast.error(err.response?.data?.message || "Login failed");
     }
   };
 
@@ -39,7 +41,7 @@ export default function AdminLogin() {
       <div className="bordered-box2">
      <div  className="login-form"> 
 
-      <h2 className="login-text">Admin Login</h2>
+      <h2 className="admin-login-text">Admin Login</h2>
 
       <form onSubmit={handleLogin}>
         <input className="input-field"

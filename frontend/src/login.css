@@ -131,6 +131,12 @@ input[type="date"]::-webkit-datetime-edit {
     font-size: 28px;
     margin-top: 60px;
 }
+.admin-login-text{
+  margin-left: 86px;
+    color: rgb(106, 106, 246);
+    font-size: 28px;
+    margin-top: 60px;
+}
 .link{
     text-decoration: none;
     color: rgb(33, 186, 33);
