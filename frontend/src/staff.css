@@ -9,7 +9,7 @@ body{
   overflow-x: hidden;
 }
 .staff-container{
-    background-color: #081739;
+    background-color:#F1F5F9;
 }
 .header-tab{
      display: flex;
@@ -27,18 +27,18 @@ body{
   z-index: 100;
 }
 .Logout-Button{
-    width: 85px;
+    
+   width: 85px;
    height: 35px;
-  margin-right: 50px;
-    margin-left: 100px;
-   margin-top: 4px;
-   margin-bottom: 10px;
    cursor: pointer;
    background-color: white;
    border: none;
    color: black;
-   
    border-radius: 10px;
+   margin-bottom: 13px;
+   margin-right: 20px;
+   
+   
 }
 .Welcome-text{
     font-size: 30px;
@@ -54,7 +54,7 @@ body{
 .assingned-complaint-text{
   display: flex;
   justify-content: center;
-    color: white;
+    color: black;
    
     font-size: 30px;
     margin-top: 170px;
@@ -74,9 +74,12 @@ body{
   border:1px solid rgb(9, 9, 233);
   margin-bottom: 50px;
   margin-right: 40px;
-  color: white;
+  color: black;
+  background-color: white;
+  border: 1px solid #CBD5E1;
   height: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   margin-left: 20px;  
   border-radius: 10px;
   overflow-y: auto;
@@ -91,10 +94,15 @@ body{
 }
 .Complaint-card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 0px 80px rgb(46, 46, 151);
+  /* box-shadow: 0px 0px 80px rgb(46, 46, 151); */
 }
 
-
+.staff-labels{
+  
+}
+.inprogress{
+  margin-left: -0px;
+}
 
 .Complaint-content{
     margin-left: 35px;
@@ -106,7 +114,7 @@ body{
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 30px;
-   color: rgb(135, 135, 239);
+   color: #1E293B;
 }
 .assign-complaint{
   background-color: rgb(59, 59, 215);
@@ -129,10 +137,16 @@ body{
 .no-assigned-text{
   display: flex;
   justify-content: center;
-  color: white;
+  color: black;
   font-size: 25px;
   
 }
+.progress{
+  
+  color: #1D4ED8;
+  background-color:  #DBEAFE;
+  font-size: 16px; 
+} 
 
 @media (max-width: 768px) {
    .Header{
@@ -151,9 +165,11 @@ body{
   }
    .Logout-Button{
     margin-right: -10px;
+    margin-top: 8px;
+    margin-right: 2px;
    }
   .Complaint-content{
-    width: 260px;
+    width: 280px;
   }
   .complaint-card {
      width: 70%;  

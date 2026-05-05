@@ -36,7 +36,7 @@ const cardRefs = useRef({});
       setComplaints(res.data);
        console.log(res.data);
     } catch (err) {
-      alert(err.response?.data?.message || "Failed to fetch complaints ");
+      toast.error(err.response?.data?.message || "Failed to fetch complaints ");
     }
   };
 
@@ -48,12 +48,12 @@ const submitFeedback = async () => {
 
   //  Validate first
   if (!rating || rating < 1 || rating > 5) {
-    alert("Please select a valid rating (1-5)");
+    toast.error("Please select a valid rating (1-5)");
     return;
   }
 
   if (!comment || comment.trim() === "") {
-    alert("Please enter your feedback");
+    toast.error("Please enter your feedback");
     return;
   }
   try {
@@ -62,12 +62,12 @@ const submitFeedback = async () => {
       comment
     });
 
-    alert("Feedback submitted ");
+    toast.success("Feedback submitted ");
     setSelectedComplaint(null);
     fetchMyComplaints();
 
   } catch (err) {
-    alert(err.response?.data?.message || "Error");
+    toast.error(err.response?.data?.message || "Error");
   }
 };
 
@@ -151,7 +151,7 @@ useEffect(() => {
 
   // Block if feedback not given
   if (c.status === "Resolved" && !c.feedback?.given) {
-    alert("Please fill the feedback before deleting.");
+    toast.error("Please fill the feedback before deleting.");
     return;
   }
 
@@ -255,9 +255,9 @@ useEffect(() => {
                 value={priority}
                 onChange={(e) => setPriority(e.target.value)}
               >
-                <option value="Low">Low</option>
-                <option value="Medium">Medium</option>
-                <option value="High">High</option>
+                <option  className="priority-low" value="Low">Low</option>
+                <option className="priority-medium" value="Medium">Medium</option>
+                <option className="priority-high" value="High">High</option>
               </select>
             </div>
 
@@ -286,15 +286,15 @@ useEffect(() => {
               <div className="complaint-card" ref={(el) => (cardRefs.current[c._id] = el)}>
                 <div className="my-complaint-content">
                 <h3>{c.title}</h3>
-                <p>{c.description}</p>
+                <p className="Description">{c.description}</p>
 
                 <p>
-                  <b>Category:</b> {c.category} | <b>Priority:</b>{" "}
+                  <b className="labels">Category :</b> {c.category} | <b className="labels">Priority :</b>{" "}
                   {c.priority}
                 </p>
 
                 <p>
-                  <b className="status">Status:</b>{" "}
+                  <b className="status">Status :</b>{" "}
                   <span className={`status ${c.status.toLowerCase()}`}>
                     {c.status}
                   </span>

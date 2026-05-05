@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import API from "../api/axios";
 import "../admin.css"
@@ -12,7 +13,7 @@ export default function AdminDashboard() {
       const res = await API.get("/api/admin/complaints");
       setComplaints(res.data);
     } catch (err) {
-      alert(err.response?.data?.message || "Failed to load complaints ");
+      toast.error(err.response?.data?.message || "Failed to load complaints ");
     }
   };
 
@@ -40,10 +41,10 @@ export default function AdminDashboard() {
         staffId,
       });
 
-      alert(res.data.message || "Assigned successfully ");
+      toast.success(res.data.message || "Assigned successfully ");
       fetchAllComplaints();
     } catch (err) {
-      alert(err.response?.data?.message || "Assign failed ");
+      toast.error(err.response?.data?.message || "Assign failed ");
     }
   };
 
@@ -55,13 +56,13 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <div >
       <div className="navbar">
       <h2 className="admin-text">Welcome, Admin</h2>
       <button className="logout-button" onClick={handleLogout}>Logout</button>
       </div>
 
-     
+     <div className="admin-container">
 
       <p className="allcomplaint-text" >All Complaints</p>
 
@@ -76,23 +77,23 @@ export default function AdminDashboard() {
           >
             <div className="complaint-content">
             <h3>{c.title}</h3>
-            <p>{c.description}</p>
+            <p className="Description">{c.description}</p>
 
             
 
             <p>
-              <b>Priority:</b> {c.priority} | <b>Status: </b> 
+              <b className="labels">Priority:</b> {c.priority} | <b className="labels">Status: </b> 
                 <span className={`status ${c.status.toLowerCase()}`}>
                     {c.status}
                 </span>
            </p>
 
             <p>
-              <b>Student:</b> {c.studentId?.name} ({c.studentId?.department},{c.studentId?.year})
+              <b className="labels">Student:</b> {c.studentId?.name} ({c.studentId?.department},{c.studentId?.year})
             </p>
 
             <p>
-              <b>Assigned Staff:</b>{" "}
+              <b className="labels">Assigned Staff:</b>{" "}
               {c.assignedTo ? c.assignedTo.name : "Not Assigned"}
             </p>
            
@@ -119,11 +120,6 @@ export default function AdminDashboard() {
   </>
 )}
 
-              
-              
-
-              
-
             
                 {c.feedback?.given && (
     <div className="feedback-display">
@@ -138,6 +134,7 @@ export default function AdminDashboard() {
         ))
       )}
       </div>
+    </div>
     </div>
   );
 }

@@ -77,12 +77,15 @@ export default function StaffDashboard() {
           >
             <div className="Complaint-content">
             <h3>{c.title}</h3>
-            <p>{c.description}</p>
+            <p className="Description">{c.description}</p>
 
             <p>
-              <b>Priority:</b> {c.priority} | <b>Status:</b> {c.status}
+              <b className="staff-labels">Priority:</b> {c.priority} | <b className="status">Status :</b>{" "}
+                  <span className={`status ${c.status.toLowerCase()}`}>
+                    {c.status}
+                  </span>
             </p>
-
+                {/* //<b className="status">Status:</b>  {c.status} */}
             <select className="assign-complaint"
               value={c.status}
               onChange={(e) => updateStatus(c._id, e.target.value)}

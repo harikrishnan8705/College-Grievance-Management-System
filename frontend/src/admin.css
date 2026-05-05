@@ -1,12 +1,12 @@
 body{
-    background-color: #081739;
+    background-color: red; 
     font-family:cursive;
 }
 
 .navbar{
   
   display:flex;
-    margin-top: -20px;
+    margin-top: -100px;
     margin-bottom: 0px;
     height: 80px;
     width: 100%;
@@ -40,22 +40,32 @@ body{
   margin-left: 50px;
   
 }
+
+.admin-container{
+  background-color: #F1F5F9;
+  left:0;
+  right:0;
+}
 .allcomplaint-text{
-  color: white;
+  color: black;
   font-size: 30px;
   padding-left: 20px;
   margin-bottom: -20px;
   margin-top: 100px;
   margin-left: 40%;
 }
+
+
 .complain-card{
   width: 400px;
-  border:1px solid blue;
+  border:1px solid #CBD5E1;
+  background-color: white;
   margin-bottom: 50px;
   margin-right: 50px;
-  color: white;
+  color: black;
   height: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   cursor: pointer;
   border-radius: 10px;
   overflow-y: auto;
@@ -69,12 +79,12 @@ body{
 }
 .complain-card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 0px 80px rgb(46, 46, 151);
+  /* box-shadow: 0px 0px 80px rgb(46, 46, 151); */
 }
 
 .complaints{
    
-  margin-left: 50px;
+  margin-left: 80px;
    display: flex;
     flex-wrap: wrap;
      overflow: visible;
@@ -91,6 +101,7 @@ body{
   margin-bottom: 15px;
   display: flex;
   justify-content: center;
+  color:#1E293B;
 }
 .selectstaff-button{
   background-color: blue;
@@ -106,5 +117,6 @@ body{
     width: 90%;
     margin: 20px auto;  
   }
+
 }
 
